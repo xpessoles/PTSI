@@ -12,6 +12,21 @@
 \definecolor{violetc}{RGB}{230,224,236}
 \definecolor{jaunec}{RGB}{220,255,191}
 
+
+
+\newenvironment{corrige}[1][\hsize]%
+{%
+    \def\FrameCommand%
+    {%
+\rotatebox{90}{\textit{\textsf{Corrigé}}} 
+        {\color{violetf}\vrule width 3pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{violetc}%
+    }%
+    \MakeFramed{\hsize #1 \advance\hsize-\width\FrameRestore}%
+}%
+{\endMakeFramed}%
+
 \newenvironment{sci}[1][\hsize]%
 {%
     \def\FrameCommand%
