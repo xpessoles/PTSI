@@ -41,11 +41,11 @@
 \fancyfoot[R]{\footnotesize{\xxpied}}
 
 \begin{center}
- \huge\textsc{\xxtitre}
+ \ifthenelse{\boolean{td}}{\Large\textsc{\xxtitre}}{\huge\textsc{\xxtitre}}
 \end{center}
 
 \begin{center}
- \LARGE\textsc{\xxsoustitre}
+ \ifthenelse{\boolean{td}}{\large\textsc{\xxsoustitre}}{ \LARGE\textsc{\xxsoustitre}}
 \end{center}
 
 \vspace{.5cm}
