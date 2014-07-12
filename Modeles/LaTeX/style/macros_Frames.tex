@@ -69,20 +69,6 @@
 {\endMakeFramed}%
 
 
-\newenvironment{envsql}[1][\hsize]%
-{%
-    \def\FrameCommand%
-    {%
-\rotatebox{90}{\textit{\textsf{SQL}}} 
-        {\color{violetf}\vrule width 3pt}%
-        \hspace{0pt}%must no space.
-        \fboxsep=\FrameSep\colorbox{violetc}%
-    }%
-    \MakeFramed{\hsize #1 \advance\hsize-\width\FrameRestore}%
-}%
-{\endMakeFramed}%
-
-
 \newenvironment{term}[1][\hsize]%
 {%
     \def\FrameCommand%
@@ -96,6 +82,20 @@
 }%
 {\endMakeFramed}%
 
+
+
+\newenvironment{comp}[1][\hsize]%
+{%
+    \def\FrameCommand
+    {%
+\rotatebox{90}{\textit{\textsf{Compétences}}} 
+        {\color{bleuf}\vrule width 3pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{bleuc}%
+    }%
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}%
+{\endMakeFramed}%
 
 \newenvironment{rem}[1][\hsize]%
 {%
