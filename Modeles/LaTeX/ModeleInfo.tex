@@ -7,15 +7,17 @@
 
 %Si le boolen xp est vrai : compilation pour xabi
 %Sinon compilation Damien
-\newboolean{xp}
-\setboolean{xp}{true}
-
-\newboolean{prof}
-\setboolean{prof}{false}
-
 \newif\ifprof
 %\proftrue
 \proffalse
+
+\newif\ifxp
+\xptrue
+%\xpfalse
+
+\newif\iftd
+\tdtrue
+%\tdfalse
 
 \usepackage[%
     pdftitle={DS Informatique - Concours Blanc},
@@ -24,30 +26,39 @@
     linkcolor=blue,
     citecolor=magenta]{hyperref}
 
-
 \def\discipline{Informatique}
-\def\xxtitre{\ifthenelse{\boolean{xp}}{
-Concours Blanc}{
-Chapitre  -- }}
+\def\xxtitre{%
+\ifxp
+CI ** : 
+\else
+\fi
+}
 
-\def\xxsoustitre{\ifthenelse{\boolean{xp}}{
-Identification du comportement d'un système asservi}{
-Partie  -- }}
+\def\xxsoustitre{%
+\ifxp
+Chapitre ** -- 
+\else
+\fi}
 
-\def\xxauteur{\ifthenelse{\boolean{xp}}{
-Xavier \textsc{Pessoles}}{
-Damien \textsc{Iceta} \\ Xavier \textsc{Pessoles}}}
+\def\xxauteur{%
+\ifxp
+Xavier \textsc{Pessoles}
+\else
+\fi}
 
-\def\xxpied{\ifthenelse{\boolean{xp}}{
-Concours Blanc\\
-Sujet}{
-\xxtitre}}
+\def\xxpied{%
+\ifxp
+CI ** : **\\
+Ch. ** : ** -- Cours TD
+\else
+\fi}
 
-\def\xxcathegorie{\ifthenelse{\boolean{xp}}{
+\def\xxpied{%
+\ifxp
 2013 -- 2014 \\
-Xavier \textsc{Pessoles}}{
-Informatique - Cours}}
-
+Xavier \textsc{Pessoles}
+\else
+\fi}
 
 
 
@@ -56,9 +67,11 @@ Informatique - Cours}}
 
 
 \begin{document}
-
-\ifthenelse{\boolean{xp}}{\input{style/enteteXP}}{\input{style/enteteDI}}
-
+\ifxp
+\input{style/enteteXP}
+\else
+\input{style/enteteDI}
+\fi
 
 
 
