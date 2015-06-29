@@ -1,4 +1,4 @@
-\documentclass[10pt,fleqn]{book} % Default font size and left-justified equations
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
 \input{style/new_style}
 
 
@@ -11,8 +11,19 @@
 
 \begin{document}
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
-\chapter{Text Chapter}
+%\part{TEST PART}
+%\chapterimage{chapter_head_2.pdf} % Chapter heading image
+%\chapter{Text Chapter}
+
+
+\begin{flushright}
+\begin{minipage}{.4\linewidth}
+\startcontents
+\printcontents{}{1}{}
+\end{minipage}
+\end{flushright}
+
+%\newpage
 
 \section{Titre 1}
 \subsection{Sous titre 1.1}
@@ -49,8 +60,6 @@ The concepts presented here are now in conventional employment in mathematics. V
 \subsection{Sous titre 2.1}
 \subsection{Sous titre 2.2}
 \subsection{Sous titre 2.3}
-
-
 \end{document}
 
 
