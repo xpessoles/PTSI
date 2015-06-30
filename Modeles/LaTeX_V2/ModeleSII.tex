@@ -6,7 +6,29 @@
 %%\proftrue
 %\proffalse
 
+
+\def\discipline{Sciences Industrielles de l'Ingénieur}
+\def\xxtitre{%
+\ifxp
+CI ** : 
+\else
+\fi
+}
+
+\def\xxsoustitre{%
+Chapitre ** -- }
+
+\def\xxauteur{%
+Xavier \textsc{Pessoles}
+}
+
+\def\xxpied{%
+CI ** : **\\
+Ch. ** : ** -- Cours TD
+}
+
 %---------------------------------------------------------------------------
+
 
 
 \begin{document}
@@ -14,16 +36,67 @@
 %\part{TEST PART}
 %\chapterimage{chapter_head_2.pdf} % Chapter heading image
 %\chapter{Text Chapter}
+\pagestyle{empty}
 
+\begin{minipage}{1cm}
+\rotatebox{90}{\LARGE\sffamily\textsc{\color{ocre}\textbf{Partie 1}}}
+\end{minipage} \hfill
+\begin{minipage}[c]{9cm}
+\begin{titrepartie}
+\begin{flushright}
+\renewcommand{\baselinestretch}{1.1} 
+\Large\sffamily\textsc{\textbf{Étude cinématique des systèmes de solides de la chaîne d'énergie
+Analyser, Modéliser, Résoudre}}
+\renewcommand{\baselinestretch}{1} 
+\end{flushright}
+\end{titrepartie}
+
+\end{minipage} \hfill
+\begin{minipage}[c]{3.5cm}
+{\large\sffamily\textsc{\textbf{\color{ocre} Sciences \\ Industrielles de \\ l'Ingénieur}}}
+\end{minipage} 
+
+\vspace{2cm}
+
+\begin{minipage}{2cm}
+\LARGE\sffamily\textsc{\color{ocre}\textbf{Cours}}
+\end{minipage} \hfill
+\begin{minipage}[c]{12cm}
+\begin{titrechapitre}
+\renewcommand{\baselinestretch}{1.1} 
+
+\Large\sffamily\textsc{\textbf{Chapitre 1}}
+
+\Large\sffamily\textsc{\textbf{Titre du chapitre blla bla bkabka bkabakbakb bkabakbakb bkabakbakb bkabakbakb}}
+
+\vspace{.5cm}
+\renewcommand{\baselinestretch}{1} 
+\normalsize\normalfont
+\textsl{\textbf{Concevoir :}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item Conc1-C2 : Démarche de conception appliquée aux fonctions techniques;
+\item Conc1-C3.4 : Critères de choix pour la fonction : la fonction assemblage;
+\item Conc2-C5 : Méthodes de conception.
+\end{itemize}}
+
+\renewcommand{\baselinestretch}{1} 
+
+\end{titrechapitre}
+
+\end{minipage} 
+
+\vspace{2cm}
 
 \begin{flushright}
-\begin{minipage}{.4\linewidth}
+\begin{minipage}{.6\linewidth}
 \startcontents
 \printcontents{}{1}{}
 \end{minipage}
 \end{flushright}
 
-%\newpage
+\newpage
+\pagestyle{fancy}
+
 
 \section{Titre 1}
 \subsection{Sous titre 1.1}
@@ -52,6 +125,11 @@ The concepts presented here are now in conventional employment in mathematics. V
 \begin{definition}[Titre]
 The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
 \end{definition}
+
+\begin{vocabulary}[Titre - Vocab]
+The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+\end{vocabulary}
+
 \subsection{Sous titre 1.2}
 \lipsum[1-2]
 \subsection{Sous titre 1.3}
