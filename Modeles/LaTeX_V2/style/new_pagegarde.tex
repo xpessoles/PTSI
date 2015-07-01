@@ -1,0 +1,73 @@
+\pagestyle{empty}
+
+
+\chapterimage{chapter_head_2.pdf}
+%\chapterentete{}
+
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\draw[anchor=west] (-2cm,-6cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=40pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (1cm,-6cm) node {\huge\sffamily\bfseries\color{black} %
+\begin{minipage}{1cm}
+\rotatebox{90}{\LARGE\sffamily\textsc{\color{ocre}\textbf{\xxnumpartie}}}
+\end{minipage} \hfill
+\begin{minipage}[c]{14cm}
+\begin{titrepartie}
+\begin{flushright}
+\renewcommand{\baselinestretch}{1.1} 
+\Large\sffamily\textsc{\textbf{\xxpartie}}
+\renewcommand{\baselinestretch}{1} 
+\end{flushright}
+\end{titrepartie}
+\end{minipage} \hfill
+\begin{minipage}[c]{3.5cm}
+{\large\sffamily\textsc{\textbf{\color{ocre} \discipline}}}
+\end{minipage} 
+ };
+\end{tikzpicture}};
+\end{tikzpicture}
+
+\vspace {3.5 cm}
+
+
+
+\begin{tikzpicture}[remember picture,overlay]
+\draw[anchor=west] (-2cm,-6cm) node {\huge\sffamily\bfseries\color{black} %
+\begin{minipage}{2cm}
+\LARGE\sffamily\textsc{\color{ocre}\textbf{\xxactivite}}
+\end{minipage} \hfill
+\begin{minipage}[c]{15cm}
+\begin{titrechapitre}
+\renewcommand{\baselinestretch}{1.1} 
+\Large\sffamily\textsc{\textbf{\xxnumchapitre}}
+
+\Large\sffamily\textsc{\textbf{\xxchapitre}}
+\vspace{.5cm}
+
+\renewcommand{\baselinestretch}{1} 
+\normalsize\normalfont
+\xxcompetences
+\end{titrechapitre}
+\end{minipage}  };
+\end{tikzpicture}
+
+
+
+\iftd
+\else
+\vfill
+
+\begin{flushright}
+\begin{minipage}[c]{.3\linewidth}
+\xxfigures
+\end{minipage}\hfill
+\begin{minipage}[c]{.6\linewidth}
+\startcontents
+\printcontents{}{1}{}
+\end{minipage}
+\end{flushright}
+\newpage
+\pagestyle{fancy}
+\fi
