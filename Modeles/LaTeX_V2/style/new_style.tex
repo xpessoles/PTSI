@@ -10,10 +10,10 @@
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
+\usepackage[top=2.5cm,bottom=2cm,left=2cm,right=2cm,headsep=40pt,a4paper]{geometry} % Page margins
 
 \usepackage{graphicx} % Required for including pictures
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\graphicspath{{Images/}} % Specifies the directory where pictures are stored
 
 \usepackage{lipsum} % Inserts dummy text
 
@@ -28,7 +28,8 @@
 \usepackage{booktabs} % Required for nicer horizontal rules in tables
 
 \usepackage{xcolor} % Required for specifying colors by name
-\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+%\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+\definecolor{ocre}{RGB}{49,133,156} 
 \usepackage{enumitem}
 \usepackage{pifont} % Pour les dinglist
 %----------------------------------------------------------------------------------------
@@ -145,7 +146,7 @@
  \fancyhead{}
  \fancyhead[L]{%
  \noindent\begin{minipage}[c]{2.6cm}%
-% \includegraphics[width=2cm]{png/logo_ptsi.png}%
+ \includegraphics[width=2cm]{png/logo_lycee.png}%
  \end{minipage}}
 
 \fancyhead[C]{\rule{8cm}{.5pt}}
@@ -304,7 +305,7 @@
 % Theorem box
 \newmdenv[skipabove=7pt,
 skipbelow=7pt,
-backgroundcolor=black!5,
+backgroundcolor=ocre!10,
 linecolor=ocre,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
@@ -337,6 +338,7 @@ rightline=false,
 leftline=true,
 topline=false,
 bottomline=false,
+backgroundcolor=ocre!10,
 linecolor=ocre,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
