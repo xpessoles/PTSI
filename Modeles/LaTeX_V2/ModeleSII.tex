@@ -1,6 +1,6 @@
 \documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
 \input{style/new_style}
-
+\input{style/macros_SII}
 %\newif\ifprof
 %%\proftrue
 %\proffalse
@@ -10,14 +10,25 @@
 %\proffalse
 
 \def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PTSI}
 \def\xxnumpartie{Partie 1}
 \def\xxpartie{Titre de la partie coucouc \\ 
 Sous titre de la partie \\
 Compétence, Compétence, Compétence}
+
 \def\xxnumchapitre{Chapitre 1}
 \def\xxchapitre{Titre du chapitre blla bla bkabka bkabakbakb bkabakbakb bkabakbakb bkabakbakb}
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+\def\xxonglet{Part. 1 -- Ch. 2}
+
 \def\xxactivite{Cours}
 \def\xxauteur{\textsl{Xavier Pessoles}}
+
 \def\xxcompetences{%
 \textsl{\textbf{Concevoir :}
 \begin{itemize}[label=\ding{112},font=\color{ocre}] 
@@ -26,21 +37,28 @@ Compétence, Compétence, Compétence}
 \item Conc2-C5 : Méthodes de conception.
 \end{itemize}}
 }
-\def\xxtete{Sciences Industrielles de l'Ingénieur}
-\def\xxfigures{AAA}%figues de la page de garde
+
+\def\xxfigures{
+%\includegraphics[width=.9\textwidth]{images/prot_01}
+
+\includegraphics[width=.9\textwidth]{images/prot_01}
+
+\includegraphics[width=.9\textwidth]{images/prot_01}
+}%figues de la page de garde
 \def\xxpied{%
 CI ** : **\\
 Ch. ** : ** -- Cours TD
 }
 
-\def\xxposonglet{20}
-\def\xxonglet{TOTO}
+
+
 %---------------------------------------------------------------------------
 
 
 
 
 \begin{document}
+\chapterimage{png/Fond_SLCI}
 \input{style/new_pagegarde}
 
 \newpage

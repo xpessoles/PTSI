@@ -171,14 +171,21 @@
 \noindent\footnotesize{{\xxauteur}}
 \end{minipage}}
 
-\fancyfoot[RE]{\footnotesize{\xxpied}}
 
-\fancyfoot[RO]{\footnotesize{\xxpied}
-\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north east,inner sep=0pt] at (1.5,\xxposonglet) {%
-\rotatebox{90}{\xxonglet}};
+\fancyfoot[R]{\footnotesize{\xxpied}
+\ifthenelse{\isodd{\value{page}}}{
+\begin{tikzpicture}[overlay]
+\node[shape=rectangle, 
+      rounded corners = .25 cm,
+	  draw= ocre,
+	  line width=2pt, 
+	  fill = ocre!10,
+	  minimum width  = 2.5cm,
+	  minimum height = 3cm,] at (\xxposongletx,\xxposonglety) {};
+\node at (\xxposonglettext,\xxposonglety) {\rotatebox{90}{\textbf{\large\color{ocre}{\xxonglet}}}};
 %{};
-\end{tikzpicture}}
+\end{tikzpicture}}{}
+}
 %
 %
 %
@@ -295,21 +302,21 @@
 \newcounter{dummy} 
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
-\newtheorem{theoremeT}[dummy]{Theorem}
+\newtheorem{theoremeT}[dummy]{Théorème}
 %\newtheorem{problem}{Problem}[chapter]
 \newtheorem{problem}{Problem}[section]
 %\newtheorem{exerciseT}{Exercise}[chapter]
-\newtheorem{exerciseT}{Exercise}[section]
+\newtheorem{exerciseT}{Exercice}[section]
 
 \theoremstyle{blacknumex}
 %\newtheorem{exampleT}{Example}[chapter]
-\newtheorem{exampleT}{Example}[section]
+\newtheorem{exampleT}{Exemple}[section]
 \theoremstyle{blacknumbox}
 %\newtheorem{vocabulary}{Vocabulary}[chapter]
-\newtheorem{vocabulary}{Vocabulary}[section]
+\newtheorem{vocabulary}{Vocabulaire}[section]
 %\newtheorem{definitionT}{Definition}[section]
-\newtheorem{definitionT}{Definition}[section]
-\newtheorem{corollaryT}[dummy]{Corollary}
+\newtheorem{definitionT}{Définition}[section]
+\newtheorem{corollaryT}[dummy]{Corollaire}
 
 \theoremstyle{ocrenum}
 \newtheorem{proposition}[dummy]{Proposition}

@@ -1,7 +1,6 @@
 \pagestyle{empty}
 
 
-\chapterimage{png/Fond_SLCI}
 %\chapterentete{}
 
 \begin{tikzpicture}[remember picture,overlay]
@@ -29,9 +28,19 @@
 \end{tikzpicture}};
 \end{tikzpicture}
 
+\begin{tikzpicture}[overlay]
+\node[shape=rectangle, 
+      rounded corners = .25 cm,
+	  draw= ocre,
+	  line width=2pt, 
+	  fill = ocre!10,
+	  minimum width  = 2.5cm,
+	  minimum height = 3cm,] at (18cm,0) {};
+\node at (17.7cm,0) {\rotatebox{90}{\textbf{\Large\color{ocre}{\classe}}}};
+%{};
+\end{tikzpicture}
+
 \vspace {3.5 cm}
-
-
 
 \begin{tikzpicture}[remember picture,overlay]
 \draw[anchor=west] (-2cm,-6cm) node {\huge\sffamily\bfseries\color{black} %
@@ -53,6 +62,9 @@
 \end{minipage}  };
 \end{tikzpicture}
 
+
+
+% TABLE DES MATIERES
 
 
 \iftd
