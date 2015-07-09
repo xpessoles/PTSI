@@ -33,6 +33,8 @@
 \definecolor{violetf}{RGB}{112,48,160} % Couleur ''violet''
 \usepackage{enumitem}
 \usepackage{pifont} % Pour les dinglist
+\usepackage{multicol}
+
 %----------------------------------------------------------------------------------------
 %	FONTS
 %----------------------------------------------------------------------------------------
@@ -662,3 +664,10 @@ addtohook={%
 \makeatother
 \renewcommand{\thesubparagraph}{\arabic{subparagraph}} 
 \makeatletter
+
+
+% Définition des booleéns
+\newif\iffiche
+\newif\ifprof
+\newif\iftd
+\newif\ifcours
