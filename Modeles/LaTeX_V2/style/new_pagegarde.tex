@@ -1,5 +1,7 @@
 \pagestyle{empty}
 
+
+%%%%%%%% PAGE DE GARDE COURS
 \ifcours
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
@@ -26,7 +28,7 @@
 \end{tikzpicture}};
 \end{tikzpicture}
 
-%%%%%%%%%% PAGE DE GARDE COURS %%%%%%%%%%%%%%%
+
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
@@ -75,6 +77,23 @@
 \printcontents{}{1}{}
 \end{minipage}
 \end{flushright}
+
+\begin{tikzpicture}[remember picture,overlay]
+\draw[anchor=west] (4.5cm,-.7cm) node {
+\begin{minipage}[c]{.2\linewidth}
+\begin{flushright}
+\includegraphics[width=2cm]{png/logoCC}
+\end{flushright}
+\end{minipage}
+\begin{minipage}[c]{.2\linewidth}
+\textsl{\xxauteur} \\
+\textsl{\classe}
+\end{minipage}
+ };
+\end{tikzpicture}
+\newpage
+\pagestyle{fancy}
+
 \newpage
 \pagestyle{fancy}
 
@@ -82,6 +101,7 @@
 \fi
 
 
+%%%%%%%% PAGE DE GARDE TD
 \iftd
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
@@ -163,7 +183,7 @@
 \fi
 
 
-
+%%%%%%%% PAGE DE GARDE FICHE
 \iffiche
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
@@ -193,7 +213,7 @@
 \end{tikzpicture}};
 \end{tikzpicture}
 
-%%%%%%%%%% PAGE DE GARDE TD %%%%%%%%%%%%%%%
+
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
