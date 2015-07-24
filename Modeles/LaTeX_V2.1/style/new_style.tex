@@ -334,6 +334,7 @@
 \newtheorem{pyT}{Python\\}[section]
 \newtheorem{sciT}{Scilab\\}[section]
 \newtheorem{pseudoT}{Pseudo Code\\}[section]
+\newtheorem{sqlT}{SQL\\}[section]
 
 \theoremstyle{blacknumbox}
 %\newtheorem{vocabulary}{Vocabulary}[chapter]
@@ -578,7 +579,7 @@ linewidth=4pt,
 innerbottommargin=5pt]{sciBox}
 
 
-% Boite pour scilab
+% Boite pour pseudo
 \newmdenv[skipabove=7pt,
 skipbelow=7pt,
 rightline=false,
@@ -594,6 +595,25 @@ leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt,
 innerbottommargin=5pt]{pseudoBox}
+
+% Boite pour pseudo
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=gray,
+backgroundcolor=white,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=5pt]{sqlBox}
+
+
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
 \newenvironment{resultat}{\begin{tBox}\begin{resultatT}}{\end{resultatT}\end{tBox}}
@@ -617,6 +637,8 @@ innerbottommargin=5pt]{pseudoBox}
 \newenvironment{py}{ \begin{pyBox}\begin{pyT}}{\end{pyT}\end{pyBox}}
 \newenvironment{sci}{ \begin{sciBox}\begin{sciT}}{\end{sciT}\end{sciBox}}
 \newenvironment{pseudo}{ \begin{pseudoBox}\begin{pseudoT}}{\end{pseudoT}\end{pseudoBox}}
+\newenvironment{envsql}{ \begin{sqlBox}\begin{sqlT}}{\end{sqlT}\end{sqlBox}}
+
 
 %----------------------------------------------------------------------------------------
 %	REMARK ENVIRONMENT
